@@ -26,5 +26,8 @@ router.get('/about', function(req, res, next) {
   res.render('about');
 });
 
+router.get('/join', function(req, res, next) {
+  res.render('join');
+});
 
 module.exports = router;

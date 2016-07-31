@@ -4,23 +4,27 @@
 <html lang="en">
 <head>
     <% include ./partials/head %>
+    <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="container">
-
     <header>
         <% include ./partials/header %>
     </header>
 
     <main>
-        <div class="jumbotron">
-            <h1>This is great</h1>
-            <p>Welcome to templating using EJS</p>
-            <h2>Loop</h2>
+        <div class="jumbotron" style="background:white;">
+        	<div class="logo">
+            	<img src="images/logo.png" width=200 height=100>
+            </div>
+            <div class="article">
+            	<p>Coming Soon!</p>
+            </div>
+<!--             <h2>Test</h2>
             <ul>
             	<% drinks.forEach(function(drink) { %>
             		<li><%= drink.name %> - <%= drink.drunkness %></li>
             	<% }); %>
-            </ul>
+            </ul> -->
         </div>
     </main>
 
