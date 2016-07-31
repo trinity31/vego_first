@@ -4,11 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var _ = require('underscore');
+var db = require('./db.js');
+var bcrypt = require('bcryptjs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var PORT = process.env.PORT || 8080; 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -56,7 +60,11 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(8080);
+db.sequelize.sync({force:true}).then(function() {
+  app.listen(PORT, function() {
+    console.log('Express listening on port ' + PORT + '!');
+  }); 
+})
 
 module.exports = app;
 
