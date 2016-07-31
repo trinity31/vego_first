@@ -61,7 +61,7 @@ app.use(function(err, req, res, next) {
 });
 
 db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+  app.listen(8080, function() {
     console.log('Express listening on port ' + PORT + '!');
   }); 
 })
