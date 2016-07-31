@@ -30,4 +30,13 @@ router.get('/join', function(req, res, next) {
   res.render('join');
 });
 
+router.post('/join', function(req, res, next) {
+	console.log('firstname:' + req.body.firstname);
+	console.log('lastname:' + req.body.lastname);
+
+	res.render('home', {
+		fname: req.body.firstname
+	});
+})
+
 module.exports = router;
