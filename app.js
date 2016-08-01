@@ -66,8 +66,8 @@ app.use(function(err, req, res, next) {
 //   }); 
 // })
 
-app.listen(PORT, function() {
-    console.log('Express listening on port ' + PORT + '!');
+app.listen(8080, function() {
+    console.log('Express listening on port 8080!');
 });
 
 module.exports = app;
